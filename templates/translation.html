@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; 
+            background-color: #f4f4f4;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            color: #333; 
+        }
+
+        h1 {
+            color: #0066cc; 
+            text-align: center; 
+        }
+
+        #translation {
+            background-color: #fff; 
+            border: 1px solid #ddd; 
+            padding: 20px; 
+            margin-top: 20px; 
+            text-align: center; 
+        }
+
+        a {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+            a:hover {
+                background-color: #0056b3; 
+            }
+    </style>
 </head>
 <body>
     <h1>Translation Result</h1>
     <div id="translation">
-        <!-- The content here can be dynamically filled by Flask or JavaScript -->
         <p>{{ translation }}</p>
     </div>
-    <a href="/">Go Back</a>
+    <div style="text-align: center;">
+        <a href="/">Go Back</a>
+    </div>
 </body>
 </html>
