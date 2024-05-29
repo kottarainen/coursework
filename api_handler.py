@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
     url = "https://example.com/"
     source_lang = "en"
-    target_lang = "lt"
+    target_lang = "de"
 
     api_key = 'f0c2562ed5msh9a561bf2ed0c36ap1714eejsnb014403e12a8'
     translate_scraped_text(url, source_lang, target_lang, api_key)

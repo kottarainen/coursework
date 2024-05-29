@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("Connected to MQTT Broker!")
-        client.subscribe("topic/translation")  # Ensure subscription happens only after a successful connection
+        client.subscribe("topic/translation") 
     else:
         print(f"Failed to connect, return code {rc}")
 

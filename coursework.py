@@ -28,16 +28,5 @@ def translate():
         translation = "Error decoding the translation result."
     return render_template('translation.html', translation=translation)
 
-# @app.route('/detect', methods=['GET', 'POST'])
-# def detect():
-#     if request.method == 'POST':
-#         text = request.form['text']
-#         api_key = 'your_api_key_here'
-#         result = detect_language(text, api_key)
-#         detected_language = result.get('data', {}).get('detections', [{}])[0].get('language', 'Language not detected')
-#         return render_template('detect.html', detected_language=detected_language)
-#     return render_template('detect.html', detected_language=None)
-
-
 if __name__ == "__main__":
     app.run(debug=True)
