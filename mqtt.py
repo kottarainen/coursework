@@ -12,15 +12,21 @@ def on_message(client, userdata, message):
 
 def on_subscribe(client, userdata, mid, granted_qos):
     print("Subscribed: ", str(mid), str(granted_qos))
+    
+def on_disconnect(client, userdata, rc):
+    if rc != 0:
+        print("Unexpected disconnection.")
+    client.reconnect()
 
 def setup_mqtt_subscriber():
     client = mqtt.Client()
     client.on_connect = on_connect
     client.on_message = on_message
     client.on_subscribe = on_subscribe
+    client.on_disconnect = on_disconnect
     
     client.connect("broker.hivemq.com", 1883, 60)  # Connect to the MQTT broker
-    client.loop_forever()  # Process network traffic and dispatch callbacks
+    client.loop_forever() 
 
 if __name__ == "__main__":
     setup_mqtt_subscriber()

@@ -4,8 +4,6 @@ import json
 
 app = Flask(__name__)
 
-app = Flask(__name__)
-
 @app.route('/')
 def home():
     return render_template('index.html')  # A general homepage with links or buttons to different functionalities
@@ -15,7 +13,7 @@ def translate():
     # Example text and language codes
     url = "https://example.com"
     source_language = "en"
-    target_language = "de"
+    target_language = "lt"
     api_key = 'f0c2562ed5msh9a561bf2ed0c36ap1714eejsnb014403e12a8'
     translate_scraped_text(url, source_language, target_language, api_key)
     try:
