@@ -28,13 +28,6 @@ def translate_text(text, source_lang, target_lang, api_key):
 
 
 def save_to_json(data, filename='output.json'):
-    """
-    Saves the given data to a JSON file.
-
-    Parameters:
-        data (dict): Data to save.
-        filename (str): Filename to save the data to.
-    """
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
         
@@ -49,9 +42,9 @@ def publish_message(topic, message):
 
     client.on_connect = on_connect
     client.connect("broker.hivemq.com", 1883, 60)
-    client.loop_start()  # Start the loop
+    client.loop_start() 
     client.publish(topic, message)
-    client.loop_stop()  # Stop the loop
+    client.loop_stop() 
     client.disconnect()
 
 
